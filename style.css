@@ -1,0 +1,44 @@
+*{
+    list-style-type: none;
+}
+
+nav{
+    border: 2px solid;
+}
+
+nav ul{
+    display: flex;
+    gap: 2%;
+}
+
+#hypervinculo{
+    margin-left: auto;
+}
+
+.juego{
+    display: flex;
+}
+
+aside{
+    width: 25%;
+    border: 2px solid;
+}
+
+main{
+    width: 75%;
+    border: 2px solid;
+}
+
+.tablero{
+    display: flex;
+}
+
+#tablero-jugador{
+    width: 50%;
+    height: 100%;
+    border-right: 2px solid;
+}
+
+#tablero-oponente{
+    width: 50%;
+}
