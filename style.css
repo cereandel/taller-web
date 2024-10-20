@@ -17,11 +17,14 @@ nav ul{
 
 .juego{
     display: flex;
+    height: 89vh;
 }
 
 aside{
     width: 25%;
     border: 2px solid;
+    display: flex;
+    align-items: center;
 }
 
 main{
@@ -30,15 +33,19 @@ main{
 }
 
 .tablero{
+    height: 100%;
     display: flex;
 }
 
-#tablero-jugador{
+#tablero-jugador, #tablero-oponente{
+    border: 2px solid;
     width: 50%;
     height: 100%;
-    border-right: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#tablero-oponente{
-    width: 50%;
+#instrucciones{
+    border: 2px solid;
 }
