@@ -5,246 +5,287 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/battleship-icon.svg" type="image/svg-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Batalla Naval</title>
   </head>
   <body>
     <nav>
       <ul>
+        <li><img src="assets/ship.png" alt="ship icon" /></li>
+        <li id="title">BattleShip</li>
         <li><input type="text" placeholder="username" /></li>
-        <li><input type="text" placeholder="password" /></li>
         <li><button>ingresar</button></li>
-        <li id="hypervinculo"><a href="#">instrucciones</a></li>
+        <li><button>jugar</button></li>
+        <li id="hipervinculo"><a href="#instrucciones">instrucciones</a></li>
       </ul>
     </nav>
 
-    <section class="juego">
+    <main class="juego">
       <aside>
+        <h2>Items</h2>
         <ul>
-          <li>Portaviones:</li>
-          <li>Acorazados:</li>
-          <li>Cruceros:</li>
-          <li>Submarinos:</li>
-          <li>Destructores:</li>
+          <li>Portaviones</li>
+          <li>Acorazados</li>
+          <li>Cruceros</li>
+          <li>Submarinos</li>
+          <li>Destructores</li>
         </ul>
       </aside>
 
-      <main>
-        <div class="tablero">
-          <section id="tablero-jugador">
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-          </section>
-          <section id="tablero-oponente">
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-            <div>◼</div>
-          </section>
-        </div>
-      </main>
+      <section class="tablero">
+        <section id="username-local">Jugador</section>
+        <section id="username-oponente">Oponente</section>
+        <section id="tablero-jugador">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+        <section id="tablero-oponente">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+      </section>
+    </main>
+
+    <section class="instrucciones" id="instrucciones">
+      <h2>Instrucciones para BattleShip</h2>
+      <ul>
+        <li>
+          <h3>Introducción:</h3>
+          <p>
+            "Batalla Naval" es un juego de estrategia para dos jugadores que
+            consiste en adivinar las posiciones de los barcos del oponente en
+            una cuadrícula.
+          </p>
+        </li>
+        <li>
+          <h3>Preparación del Juego:</h3>
+          <p>1. Cada jugador tiene un tablero de 10x10.</p>
+          <p>
+            2. Coloca los barcos (portaaviones, acorazado, crucero, submarino,
+            destructor) en horizontal o vertical sin superposición.
+          </p>
+        </li>
+        <li>
+          <h3>Inicio del Juego:</h3>
+          <p>1. Los jugadores se turnan llamando coordenadas.</p>
+          <p>
+            2. Un tiro acertado se marca con una X, y un fallo con un círculo.
+          </p>
+        </li>
+        <li>
+          <h3>Condiciones de Victoria:</h3>
+          <p>
+            1. El primer jugador en hundir todos los barcos del oponente gana.
+          </p>
+        </li>
+        <li>
+          <h3>Consejo:</h3>
+          <p>1. Coloca tus barcos estratégicamente.</p>
+        </li>
+      </ul>
     </section>
 
-    <section id="instrucciones">
-      <h2>Instrucciones</h2>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ea
-        minima a, incidunt rem assumenda velit quaerat sit adipisci neque culpa
-        eveniet aperiam molestias, eos suscipit veniam numquam minus tenetur?
-      </p>
-    </section>
+    <footer>&copy; 2024 cesar</footer>
   </body>
 </html>
