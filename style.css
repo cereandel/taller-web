@@ -205,7 +205,12 @@ button {
     width: 2vh;
     height: 2vh;
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    border: transparent;
+}
+
+.tablero div:hover{
+    background-color: #373952;
+    transition: 0.2s ease-in;
 }
 
 .instrucciones {
