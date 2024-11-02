@@ -33,29 +33,30 @@ nav ul li{
 }
 
 #title{
-    font-size: 16px;
+    font-size: 3.5vmin;
     font-weight: bold;
     color: white;
     margin-right: 3vh;
 }
 
 nav ul li img{
-    height: 7vh;
+    height: 7vmin;
     background: transparent;
 }
 
 nav ul li input{
-    height: 3vh;
+    height: 4vmin;
     border-radius: 1vh;
     background-color: #373952;
     border-color: transparent;
     font-weight: 700;
-    font-size: 14px;
-    padding-left: 16px;
+    font-size: 1.1vw;
+    padding-left: 2vw;
 }
 
 nav ul li input::placeholder{
     color: #cfcfcf;
+    text-align:justify; 
 }
 
 #hipervinculo{
@@ -64,9 +65,9 @@ nav ul li input::placeholder{
     align-items: center;
     margin-left: auto;
     margin-right: 1%;
-    height: 6vh;
+    height: 6vmin;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 2vmin;
     border-radius: 1.5vh;
     padding: 0vw 1vh;
     background: rgb(218, 127, 20);
@@ -105,6 +106,7 @@ aside h2{
     margin-bottom: 7vh;
     color: white;
     font-weight: 800;
+    font-size: 4vmin;
 }
 
 aside ul{
@@ -117,6 +119,7 @@ aside ul li{
     text-align: center;
     font-weight: bold;
     font-size:large;
+    font-size: 3vmin;
 }
 
 aside ul li:hover{
@@ -126,7 +129,7 @@ aside ul li:hover{
 }
 
 button {
-    font-size: 14sspx;
+    font-size: 1.1vw;
     color: #e1e1e1;
     font-weight: 800;
     cursor: pointer;
@@ -151,11 +154,11 @@ button {
   button:after {
     content: "";
     pointer-events: none;
-    bottom: -2px;
+    bottom: -1vh;
     left: 50%;
     position: absolute;
     width: 0%;
-    height: 2px;
+    height: 0.4%;
     background-color: #fff;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
@@ -170,14 +173,14 @@ button {
     background: transparent;
     justify-content: center;
     align-items: center;
-    background: url(assets/game-background.jfif);
+    background: url(assets/background-image.jpg);
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
     border-radius: 2vh;
     margin-right: 3vh;
     color: white;
-    font-size: medium;
+    font-size: 2vmin;
     font-weight: 700;
     text-align: center;
     padding: 5vh;
@@ -187,8 +190,8 @@ button {
     display: grid;
     width: 80%;
     height: 70%;
-    grid-template-columns: repeat(10,1fr);
-    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(10,minmax(0, 1fr));
+    grid-template-rows: repeat(10,minmax(0, 1fr));
     background-color:steelblue;
     border-radius: 1vh;
     justify-self: center;
@@ -202,26 +205,48 @@ button {
 .tablero div{
     justify-self: center;
     align-self: center;
-    width: 2vh;
-    height: 2vh;
+    width: 2vmin;
+    height: 2vmin;
     background-color: #f0f0f0;
     border: transparent;
 }
 
 .tablero div:hover{
-    background-color: #373952;
+    background-color: rgb(218, 127, 20);
     transition: 0.2s ease-in;
 }
 
-.instrucciones {
+.instrucciones{
+    height: 100%;
+    background-color: blue;
     color: white;
     margin-bottom: 5vh;
     margin-left: 3vh;
-    margin-right: 65vh;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: #212233;
+    margin-right: 3vh;
 }
 
 .instrucciones h2{
     margin-bottom: 4vh;
+    background-color: transparent;
+}
+
+.instrucciones h2, h3{
+    color: #a48eff;
+}
+
+.instrucciones h3, .instrucciones p, .instrucciones ul, .instrucciones li {
+    background-color: transparent;
+}
+
+.instrucciones h3{
+    font-size: 4vmin;
+}
+
+.instrucciones p{
+    font-size: 3vmin;
 }
 
 .instrucciones ul li{
