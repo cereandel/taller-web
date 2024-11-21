@@ -44,7 +44,7 @@ nav ul li {
   font-size: 3.5vmin;
   font-weight: bold;
   color: white;
-  margin-right: 3vh;
+  margin-right: 2.5vw;
 }
 
 nav ul li img {
@@ -105,8 +105,8 @@ aside {
   justify-content: center;
   background-color: rgba(59, 60, 80, 0.9);
   border-radius: 2vh;
-  margin-right: 3vh;
-  margin-left: 3vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
 }
 
 aside h2 {
@@ -119,8 +119,6 @@ aside h2 {
 
 aside ul {
   background: transparent;
-  margin-left: 15%;
-  margin-right: 10%;
 }
 
 aside ul li {
@@ -128,10 +126,10 @@ aside ul li {
   background: transparent;
   font-weight: bold;
   font-size: large;
-  font-size: 3vmin;
+  font-size: 2vmin;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   gap: 15%;
 }
 
@@ -191,7 +189,7 @@ button:after {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 2vh;
-  margin-right: 3vh;
+  margin-right: 2vw;
   color: white;
   font-size: 2vmin;
   font-weight: 700;
@@ -220,6 +218,8 @@ button:after {
   align-self: center;
   gap: 1.25rem;
   padding: 0.3125rem;
+  justify-items: center;
+  align-items: center; 
 }
 
 @media (max-width: 720px) {
@@ -236,14 +236,19 @@ button:after {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1.25rem;
+    padding: 5%;
   }
 
   .tablero {
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    grid-template-columns: repeat(10, minmax(0, 1fr));
-    grid-template-rows: repeat(10, minmax(0, 1fr));
-    grid-gap: 0.5rem;
+    max-width: 100%;
+    gap: 0.1rem;
+    padding: 1%;
+  }
+
+  nav{
+    width: 100vw;
   }
 }
 
@@ -264,11 +269,11 @@ button:after {
   background-color: blue;
   color: white;
   margin-bottom: 5vh;
-  margin-left: 3vh;
+  margin-left: 2.5vw;
   padding: 2%;
   border-radius: 0.625rem;
   background-color: #212233;
-  margin-right: 3vh;
+  margin-right: 2.5vw;
 }
 
 .instrucciones h2 {
@@ -303,8 +308,8 @@ h3 {
 
 .imagenLista {
   background-color: transparent;
-  width: 10%;
-  height: 10%;
+  width: 15%;
+  height: 15%;
 }
 
 footer {
