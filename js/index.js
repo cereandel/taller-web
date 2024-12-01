@@ -17,7 +17,7 @@ document
     const formData = getFormData();
     console.table(formData);
     localStorage.setItem("formData", JSON.stringify(formData));
-    window.location.href = "juego.html";
+    window.location.href = "html/juego.html";
   });
 
 function generatePlayerInputs(selectedValue) {
