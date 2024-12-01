@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../assets/icon.svg" />
+
+    <!--bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/intrucciones.css" />
+
+    <title>Batalla Naval</title>
+  </head>
+
+  <body class="text-center">
+    <div class="cover d-flex h-100 p-0 w-100 mx-auto flex-column">
+      <header class="masthead mb-4">
+        <div class="inner">
+          <h3 class="masthead-brand">Batalla Naval</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="instrucciones.html"
+              >Instrucciones</a
+            >
+            <a class="nav-link" href="#">Leaderboard</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="instrucciones">
+        <div class="row">
+          <div class="col p-0">
+            <h2 class="mb-4">Reglas Básicas</h2>
+            <ol>
+              <li>
+                <strong>Objetivo del Juego</strong>
+                <p>
+                  Hundir toda la flota enemiga antes que tu oponente hunda la
+                  tuya.
+                </p>
+              </li>
+              <li>
+                <strong>Componentes del Juego</strong>
+                <ul>
+                  <li>
+                    Tablero de juego para cada jugador (10x10 cuadrículas).
+                  </li>
+                  <li>
+                    Flota de barcos:
+                    <ul>
+                      <li>
+                        1 portaaviones (abarca 5 casillas, ya sea en sentido
+                        horizontal o vertical)
+                      </li>
+                      <li>
+                        1 acorazado (4 casillas, ya sea en sentido horizontal o
+                        vertical)
+                      </li>
+                      <li>
+                        1 crucero (3 casillas, ya sea en sentido horizontal o
+                        vertical)
+                      </li>
+                      <li>
+                        1 submarino (3 casillas, ya sea en sentido horizontal o
+                        vertical)
+                      </li>
+                      <li>
+                        1 destructor (2 casillas, ya sea en sentido horizontal o
+                        vertical)
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Preparación</strong>
+                <ul>
+                  <li>
+                    Cada jugador coloca sus barcos en el tablero de manera
+                    oculta al oponente.
+                  </li>
+                  <li>
+                    Los barcos pueden colocarse vertical u horizontalmente.
+                  </li>
+                  <li>Los barcos no pueden superponerse.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Turnos</strong>
+                <ul>
+                  <li>
+                    Los jugadores se turnan para "disparar" a las casillas del
+                    oponente, intentando adivinar la posición de los barcos
+                    enemigos.
+                  </li>
+                  <li>
+                    Cada disparo se indica seleccionando una casilla en el
+                    tablero del oponente.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Impactos</strong>
+                <ul>
+                  <li>
+                    Si un jugador acierta un disparo en una casilla que contiene
+                    parte de un barco enemigo, se marca un "impacto" (hit).
+                  </li>
+                  <li>
+                    Si el disparo no acierta en ningún barco, se marca un
+                    "fallo" (miss).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Hundimiento</strong>
+                <ul>
+                  <li>
+                    Cuando todas las casillas de un barco han sido impactadas,
+                    el barco se considera "hundido".
+                  </li>
+                  <li>
+                    Se debe informar al oponente qué barco ha sido hundido.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Victoria</strong>
+                <ul>
+                  <li>
+                    El primer jugador en hundir toda la flota enemiga gana la
+                    partida.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Duración del Turno</strong>
+                <ul>
+                  <li>
+                    Se debe establecer un límite de tiempo para cada turno de 60
+                    segundos (1 minuto) para mantener el ritmo del juego.
+                  </li>
+                  <li>
+                    Si un jugador no realiza su movimiento dentro del límite de
+                    tiempo, se considera un turno perdido.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>
+            Desarrollado por
+            <a href="https://github.com/cereandel" target="_blank"
+              >César Reyes</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!--bootstrap js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
