@@ -183,7 +183,7 @@ div .col {
   transition: background-color 0.3s ease;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1299px) {
   .col-md-6,
   .col-lg-6 {
     flex: 0 0 100%;
