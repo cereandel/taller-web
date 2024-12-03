@@ -112,9 +112,12 @@ aside h2 {
 aside ul {
   background: transparent;
   padding: 0%;
+  margin-bottom: 1%;
 }
 
 aside ul li {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4vh;
   background: transparent;
   font-weight: bold;
@@ -194,4 +197,17 @@ div .col {
 .cell:hover {
   background-color: #f0f0f0;
   cursor: pointer;
+}
+
+.fade-in-border {
+  animation: fadeInBorder 0.5s forwards;
+}
+
+@keyframes fadeInBorder {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: rgb(218, 127, 20);
+  }
 }

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img
               class="imagenLista"
               src="../assets/acorazado.png"
-              alt="portaaviones"
+              alt="acorazado"
             />
             Acorazados
           </li>
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img
               class="imagenLista"
               src="../assets/crucero.png"
-              alt="portaaviones"
+              alt="crucero"
             />
             Cruceros
           </li>
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img
               class="imagenLista"
               src="../assets/submarino.png"
-              alt="portaaviones"
+              alt="submarino"
             />
             Submarinos
           </li>
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img
               class="imagenLista"
               src="../assets/destructor.png"
-              alt="portaaviones"
+              alt="destructor"
             />
             Destructores
           </li>
