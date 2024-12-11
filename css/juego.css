@@ -141,11 +141,6 @@ aside ul li:hover {
   }
 }
 
-.cell:hover {
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-
 .fade-in-border {
   animation: fadeInBorder 0.5s forwards;
 }
@@ -161,4 +156,12 @@ aside ul li:hover {
 
 .username {
   font-size: 2vw;
+}
+
+.hover-cell {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.colored-cell {
+  background-color: yellow;
 }
