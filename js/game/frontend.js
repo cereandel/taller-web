@@ -1,23 +1,26 @@
 import Controller from "./backend/controller.js";
 
 var backend;
-var turn;
 var selectedItem;
 var orientation = "horizontal";
+var shipSizes;
+
+async function loadShips() {
+  try {
+    shipSizes = await backend.getDataShips();
+    console.log('ships loaded from "controller.js" using the fetch method.');
+    console.table(shipSizes);
+  } catch (error) {
+    window.location.href = "../index.html";
+    console.error("error loading, going back to the menu: ", error);
+  }
+}
 
 function getShipSize(selectedItem) {
-  switch (selectedItem) {
-    case "Portaviones":
-      return 5;
-    case "Acorazados":
-      return 4;
-    case "Cruceros":
-    case "Submarinos":
-      return 3;
-    case "Destructores":
-      return 2;
-    default:
-      return 0;
+  for (let i = 0; i < shipSizes.length; i++) {
+    if (shipSizes[i].name == selectedItem) {
+      return shipSizes[i].spaces;
+    }
   }
 }
 
@@ -61,7 +64,7 @@ function hoverEffect(cell, add) {
   const idElement = cell.closest(".Jugador").className;
   const id = idElement.split(" ")[1];
 
-  if (turn == id) {
+  if (backend.getCurrentPlayerTurnIndex() + 1 == id) {
     let cellsToHover = [];
     for (let i = 0; i < getShipSize(selectedItem); i++) {
       let targetCell;
@@ -101,8 +104,7 @@ function placeSchip() {
         const idElement = cell.closest(".Jugador").className;
         const id = idElement.split(" ")[1];
         const username = document.querySelector(".username").textContent;
-        console.log(id, username);
-        if (turn == id) {
+        if (backend.getCurrentPlayerTurnIndex() + 1 == id) {
           colorCell(cell);
         }
       }
@@ -141,7 +143,6 @@ function selectShip() {
           selectedImg.style.border = "2px solid rgb(218, 127, 20)";
           selectedImg.classList.add("fade-in-border");
           selectedItem = this.textContent.trim();
-          console.log(selectedItem);
         }
       }
     });
@@ -161,7 +162,7 @@ function generateItems() {
             src="../assets/portaaviones.webp"
             alt="portaaviones"
           />
-          Portaviones
+          Portaaviones
         </li>
         <li>
           <img
@@ -169,7 +170,7 @@ function generateItems() {
             src="../assets/acorazado.webp"
             alt="acorazado"
           />
-          Acorazados
+          Acorazado
         </li>
         <li>
           <img
@@ -177,7 +178,7 @@ function generateItems() {
             src="../assets/crucero.webp"
             alt="crucero"
           />
-          Cruceros
+          Crucero
         </li>
         <li>
           <img
@@ -185,7 +186,7 @@ function generateItems() {
             src="../assets/submarino.webp"
             alt="submarino"
           />
-          Submarinos
+          Submarino
         </li>
         <li>
           <img
@@ -193,10 +194,10 @@ function generateItems() {
             src="../assets/destructor.webp"
             alt="destructor"
           />
-          Destructores
+          Destructor
         </li>
       </ul>
-      <button type="button" class="btn btn-warning">Horizontal</button>
+      <button type="button" class="btn btn-warning sentido">Horizontal</button>
     </aside>
   `;
     itemsSection.insertAdjacentHTML("beforeend", itemsHTML);
@@ -208,7 +209,7 @@ function generateBoard(jugadores) {
   if (juegoSection && jugadores) {
     jugadores.forEach((player, index) => {
       const colDiv = document.createElement("div");
-      colDiv.className = "col-12 col-md-6 col-lg-6 p-4";
+      colDiv.className = "col-12 col-md-6 col-lg-6 tableros-container";
 
       const playerDiv = document.createElement("div");
       playerDiv.className = `Jugador ${index + 1}`;
@@ -247,8 +248,9 @@ function generateBoard(jugadores) {
 }
 
 function generateFront(jugadores) {
-  generateBoard(jugadores);
+  loadShips();
   generateItems();
+  generateBoard(jugadores);
   const button = document.querySelector(".btn-warning");
   button.addEventListener("click", function () {
     if (button.textContent === "Horizontal") {
@@ -263,6 +265,8 @@ function generateFront(jugadores) {
 
 function init() {
   const formData = JSON.parse(localStorage.getItem("formData"));
+  const keys = JSON.parse(localStorage.getItem("keys"));
+
   const defaultItems = new Map([
     ["portaaviones", 1],
     ["acorazado", 1],
@@ -270,12 +274,13 @@ function init() {
     ["submarino", 1],
     ["destructor", 1],
   ]);
+
   const players = [];
 
   formData.forEach((player, index) => {
     players.push({
       name: player,
-      id: index + 1,
+      id: keys[index],
       items: new Map(defaultItems),
     });
   });
@@ -290,14 +295,12 @@ document
   .getElementsByClassName("items")[0]
   .addEventListener("click", selectShip());
 
-turn = backend.getCurrentPlayerTurn().getId();
-
 document
   .getElementsByClassName("tablero")[0]
   .addEventListener("click", placeSchip());
 
-console.log(
+/*console.log(
   "turno de: ",
   backend.getCurrentPlayerTurn().getUsername(),
   backend.getCurrentPlayerTurn().getId()
-);
+);*/
