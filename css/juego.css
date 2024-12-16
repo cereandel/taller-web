@@ -79,9 +79,9 @@ aside ul li:hover {
   width: 100%;
   background-image: url(https://i.pinimg.com/originals/09/ba/63/09ba63764e3e37674b8f5502b216acd4.png);
   border-radius: 10px;
-  margin-right: 0%; /*es 2vw*/
+  margin-right: 2vw;
   height: 100%;
-  padding: 1%;
+  padding: 0%;
 }
 
 .row {
@@ -91,7 +91,7 @@ aside ul li:hover {
 }
 
 .tableros-container {
-  padding: 15vmin;
+  padding: 1.5vmin;
 }
 
 .tablero {
@@ -109,8 +109,8 @@ aside ul li:hover {
 .cell {
   justify-self: center;
   align-self: center;
-  width: 4vmin;
-  height: 4vmin;
+  width: 2.5vmin;
+  height: 2.5vmin;
   background-color: #000000e3;
   transition: background-color 0.3s ease;
 }
@@ -126,8 +126,8 @@ aside ul li:hover {
   }
 
   .cell {
-    width: 2vmin;
-    height: 2vmin;
+    width: 0.5vmin;
+    height: 0.5vmin;
   }
 }
 
